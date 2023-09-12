@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<body>
+    <header th:fragment="ShopHeader">
+        <a th:href="@{'/'}"><span class="title-link">Spider Posters</span></a>
+        <a th:href="@{/order/cart}" class="cart-link">
+            <div>
+                <span>Cart: (</span>
+                <span th:text="${@cart.counter}"></span>
+                <span>) </span>
+                <span th:text="${@cart.sum}"></span>
+                <span>EURO</span>
+            </div>
+        </a>
+    </header>
+</body>
+</html>

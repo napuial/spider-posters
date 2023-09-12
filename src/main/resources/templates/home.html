@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Spider Posters</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+<body>
+    <header th:replace="fragments/header::ShopHeader"></header>
+    <div class="posters-gallery">
+        <div class="poster" th:each="item:${items}">
+            <span class="poster-name" th:text="${item.name}"></span>
+            <img class="poster-img" th:src="${item.imgUrl}" alt="wrong file path, default is: /posters/spider.jpg">
+            <div>
+                <span>Price:</span>
+                <span th:text="${item.price}"></span>
+                <span>EURO</span>
+            </div>
+            <a th:href="@{'/add/'+${item.id}}" class="addToCart-btn">ADD TO CART</a>
+        </div>
+    </div>
+</body>
+</html>

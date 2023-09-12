@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Spider Posters - Cart Preview</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+<body>
+    <header th:replace="fragments/header::ShopHeader"></header>
+    <div class="order-table">
+        <div class="order-table-row" th:each="cartItem:${@cart.cartItems}">
+            <span th:text="${@cart.cartItems.indexOf(cartItem)+1}"></span>
+            <img class="poster-img-small" th:src="${cartItem.item.imgUrl}">
+            <span th:text="${cartItem.item.name}"></span>
+            <span>
+                <a class="decreaseInCart" title="one less" th:href="@{'/order/decrease/'+${cartItem.item.id}}">-</a>
+                <span th:text="${cartItem.counter}"></span>
+                <a class="increaseInCart" title="one more" th:href="@{'/order/increase/'+${cartItem.item.id}}">+</a>
+            </span>
+            <span><span th:text="${cartItem.price}"></span><span> EURO</span></span>
+            <a class="removeFromCart" title="remove all" th:href="@{'/order/remove/'+${cartItem.item.id}}">X</a>
+            </div>
+    </div>
+    <div class="summary">
+        <p><span>Total cost for your posters: </span><span th:text="${@cart.sum}"></span> EURO</p>
+        <a th:href="@{/order/summary}" class="finalize-btn">Finalize >>></a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,172 @@
+body {
+    margin: 0;
+}
+
+/* header */
+
+header {
+    background-color: black;
+    padding: 2px 3px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.title-link {
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.title-link:hover {
+    color: grey;
+}
+
+.cart-link {
+    text-decoration: none;
+    color: white;
+}
+
+.cart-link:hover {
+    color: grey;
+}
+
+/* home */
+
+.posters-gallery {
+    background-color: grey;
+    width: 75%;
+    height: auto;
+    margin: auto;
+    margin-top: 25px;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.poster {
+    background-color: white;
+    width: 250px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.poster-name {
+    background-color: black;
+    color: white;
+    text-align: center;
+    width: 100%;
+    padding: 2px;
+}
+
+.poster-img {
+    width: 200px;
+    height: auto;
+    border: 1px solid black;
+}
+
+.addToCart-btn {
+    text-decoration: none;
+    background-color: black;
+    color: white;
+    width: 70%;
+    text-align: center;
+    padding: 3px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.addToCart-btn:hover {
+    background-color: grey;
+}
+
+/* cart */
+
+.order-table {
+    width: 75%;
+    height: auto;
+    margin: auto;
+    margin-top: 25px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.order-table-row {
+    background-color: grey;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 5px;
+
+}
+
+.poster-img-small {
+    width: 50px;
+    height: auto;
+    border: 1px solid black;
+}
+
+.increaseInCart, .decreaseInCart, .removeFromCart {
+    text-decoration: none;
+    color: black;
+}
+
+.increaseInCart:hover, .decreaseInCart:hover, .removeFromCart:hover {
+    color: white;
+}
+
+.summary {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.finalize-btn {
+    text-decoration: none;
+     background-color: black;
+     color: white;
+     width: 70%;
+     text-align: center;
+     padding: 3px;
+     margin-top: 10px;
+     margin-bottom: 10px;
+}
+
+.finalize-btn:hover {
+    background-color: grey;
+}
+
+/* order */
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    margin: auto;
+}
+
+/* admin */
+
+.add-poster-panel {
+    margin-top: 25px;
+}
+
+/* buttons family */
+
+.order-btn, .add-poster-btn {
+    margin-top: 10px;
+    border: 0;
+    background-color: black;
+    color: white;
+}
+
+.order-btn:hover, .add-poster-btn:hover {
+    background-color: grey;
+}

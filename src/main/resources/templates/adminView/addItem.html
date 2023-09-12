@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>ADMIN PANEL - ADD POSTER</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+<body>
+    <header th:replace="fragments/header::ShopHeader"></header>
+    <div class="add-poster-panel">
+        <form th:action="@{/admin}" method="post">
+            <label>POSTER'S NAME:</label>
+            <input type="text" name="name" required>
+            <label>PRICE:</label>
+            <input type="number" min="10" step="10" name="price" required>
+            <label>PATH:</label>
+            <input type="text" name="imgUrl" value="/posters/spider.jpg">
+            <button class="add-poster-btn" type="submit">ADD NEW POSTER</button>
+        </form>
+    </div>
+</body>
+</html>
