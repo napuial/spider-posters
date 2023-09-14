@@ -18,4 +18,4 @@ Password: admin
 
 # The are also two places for administrator:
 http://localhost:8080/admin where administrator can add new poster<br>
-http://localhost:8080/admin/showOrders where administator can see informations about oders as JSON
+http://localhost:8080/admin/showOrders where administrator can see informations about orders as JSON

@@ -9,7 +9,7 @@
     <header th:replace="fragments/header::ShopHeader"></header>
     <div class="order-table">
         <div class="order-table-row" th:each="cartItem:${@cart.cartItems}">
-            <span>1</span>
+            <span th:text="${@cart.cartItems.indexOf(cartItem)+1}"></span>
             <img class="poster-img-small" th:src="${cartItem.item.imgUrl}">
             <span th:text="${cartItem.item.name}"></span>
             <span>

@@ -23,7 +23,8 @@
     </div>
     <div class="summary">
         <p><span>Total cost for your posters: </span><span th:text="${@cart.sum}"></span> EURO</p>
-        <a th:href="@{/order/summary}" class="finalize-btn">Finalize >>></a>
+        <span th:if="${@cart.cartItems.isEmpty()}">Finalize >>></span>
+        <a th:unless="${@cart.cartItems.isEmpty()}" th:href="@{/order/summary}" class="finalize-btn">Finalize >>></a>
     </div>
 </body>
 </html>
