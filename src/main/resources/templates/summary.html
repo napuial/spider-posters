@@ -8,6 +8,8 @@
 <body>
     <header th:replace="fragments/header::ShopHeader"></header>
     <div class="order-table">
+        <a th:href="@{'/order/cart'}"><button class="back-button"><<< BACK</button></a>
+        <br>
         <div class="order-table-row" th:each="cartItem:${@cart.cartItems}">
             <span th:text="${@cart.cartItems.indexOf(cartItem)+1}"></span>
             <img class="poster-img-small" th:src="${cartItem.item.imgUrl}">

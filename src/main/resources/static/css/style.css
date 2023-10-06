@@ -160,13 +160,13 @@ form {
 
 /* buttons family */
 
-.order-btn, .add-poster-btn {
+.order-btn, .add-poster-btn, .back-button {
     margin-top: 10px;
     border: 0;
     background-color: black;
     color: white;
 }
 
-.order-btn:hover, .add-poster-btn:hover {
+.order-btn:hover, .add-poster-btn:hover, .back-button:hover {
     background-color: grey;
 }
